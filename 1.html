@@ -6,37 +6,38 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Calculator</title>
+    <script src="1.js" defer></script>
     <link rel="stylesheet" href="./1.css">
 </head>
 <body>
 <div class="wrap">
     <div class="calculator">
-        <h1 class="header">Calculator</h1>
+        <h1 class="header" id="out">Calculator</h1>
         <ul class="body">
             <div class="help">
                 <div class="block">
-                    <button class="number">1</button>
-                    <button class="number">2</button>
-                    <button class="number">3</button>
-                    <button class="operation">+</button>
+                    <button onclick="num(1)" class="number">1</button>
+                    <button onclick="num(2)" class="number">2</button>
+                    <button onclick="num(3)" class="number">3</button>
+                    <button onclick="plus()" class="operation">+</button>
                 </div>
                 <div class="block">
-                    <button class="number">4</button>
-                    <button class="number">5</button>
-                    <button class="number">6</button>
-                    <button class="operation">-</button>
+                    <button onclick="num(4)" class="number">4</button>
+                    <button onclick="num(5)" class="number">5</button>
+                    <button onclick="num(6)" class="number">6</button>
+                    <button onclick="minus()" class="operation">-</button>
                 </div>
                 <div class="block">
-                    <button class="number">7</button>
-                    <button class="number">8</button>
-                    <button class="number">9</button>
-                    <button class="operation">*</button>
+                    <button onclick="num(7)" class="number">7</button>
+                    <button onclick="num(8)" class="number">8</button>
+                    <button onclick="num(9)" class="number">9</button>
+                    <button onclick="mult()" class="operation">*</button>
                 </div>
                 <div class="block">
-                    <button class="operation">C</button>
-                    <button class="number">0</button>
-                    <button class="operation">=</button>
-                    <button class="operation">/</button>
+                    <button onclick="clear()" class="operation">C</button>
+                    <button onclick="num(0)" class="number">0</button>
+                    <button onclick="isEqual()" class="operation">=</button>
+                    <button onclick="div()" class="operation">/</button>
                 </div>
             </div>
         </ul>
