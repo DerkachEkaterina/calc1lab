@@ -3,6 +3,15 @@ let num2 = 0;
 let finish = false;
 let res = 0;
 let sign = '';
+function clear(){
+    res = 0;
+    num1 = 0;
+    num2 = 0;
+    sign = '';
+    document.getElementById('out').innerHTML = 'res';
+
+}
+
 function num(n){
     if (sign == ''){
         num1 = parseInt(num1)*10+parseInt(n);
@@ -29,16 +38,6 @@ function mult(){
 function div(){
     sign = '/';
 }
-
-function clear(){
-    res = 0;
-    num1 = 0;
-    num2 = 0;
-    sign = '';
-    document.getElementById('out').innerHTML = 0;
-
-}
-
 function isEqual(){
     if(sign === '+')
         res = num1+num2;
@@ -46,14 +45,16 @@ function isEqual(){
         res = num1-num2;
     if(sign === '*')
         res = num1*num2;
-    if(sign === '/')
-        if(num2 !== 0){
-            res = num1/num2;
-        } else
-            res = 0;
+    if(sign === '/') {
+        if (num2 !== 0) {
+            res = num1 / num2;
+        } else res = 0;
+    }
 
     num1 = 0;
     num2 = 0;
+    sign = '';
     document.getElementById('out').innerHTML = res;
     res = 0;
 }
+
